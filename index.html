@@ -1,134 +1,176 @@
-```jsx
-import React from 'react';
-import { Clock, MapPin, AlertTriangle } from 'lucide-react';
 
-export default function App() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">Dallas News Network</h1>
-              <p className="text-sm text-gray-600">Breaking News • Local Coverage</p>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dallas ICE Facility Shooting - Breaking News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gray-50': '#f9fafb',
+                        'gray-100': '#f3f4f6',
+                        'gray-200': '#e5e7eb',
+                        'gray-300': '#d1d5db',
+                        'gray-400': '#9ca3af',
+                        'gray-500': '#6b7280',
+                        'gray-600': '#4b5563',
+                        'gray-700': '#374151',
+                        'gray-800': '#1f2937',
+                        'gray-900': '#111827',
+                        'red-600': '#dc2626',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose {
+            max-width: 65ch;
+        }
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+        }
+        .prose blockquote {
+            margin: 2rem 0;
+            padding-left: 1.5rem;
+            border-left-width: 4px;
+            border-left-color: #dc2626;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-4xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">Nexus Dossiers</h1>
+                    <p class="text-sm text-gray-600">Breaking News • Local Coverage</p>
+                </div>
+                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                    <i class="fas fa-clock mr-1"></i>
+                    <span>Updated 2 hours ago</span>
+                </div>
             </div>
-            <div className="flex items-center space-x-4 text-sm text-gray-500">
-              <Clock className="w-4 h-4" />
-              <span>Updated 2 hours ago</span>
-            </div>
-          </div>
         </div>
-      </header>
+    </header>
 
-      {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 py-8">
-        {/* Breaking News Banner */}
-        <div className="bg-red-600 text-white px-4 py-3 rounded-lg mb-8 flex items-center">
-          <AlertTriangle className="w-5 h-5 mr-2" />
-          <span className="font-semibold">BREAKING: Active Investigation</span>
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Breaking News Banner -->
+        <div class="bg-red-600 text-white px-4 py-3 rounded-lg mb-8 flex items-center">
+            <i class="fas fa-exclamation-triangle mr-2"></i>
+            <span class="font-semibold">BREAKING: Active Investigation</span>
         </div>
 
-        {/* Article Header */}
-        <article className="bg-white rounded-xl shadow-sm p-8 mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Dallas ICE Facility Shooting Investigated as Ideologically Motivated Attack
-          </h1>
-          
-          <div className="flex items-center text-gray-600 mb-6">
-            <MapPin className="w-4 h-4 mr-1" />
-            <span>Dallas, Texas</span>
-            <span className="mx-2">•</span>
-            <Clock className="w-4 h-4 mr-1" />
-            <span>Published: Today at 8:15 AM CST</span>
-          </div>
-
-          {/* Lead Image */}
-          <div className="relative mb-8">
-            <img 
-              src="https://placehold.co/800x400?text=ICE+Facility+Location+-+Dallas" 
-              alt="U.S. ICE Facility in Dallas"
-              className="w-full h-auto rounded-xl object-cover"
-            />
-            <div className="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded text-sm">
-              Satellite view of U.S. ICE Facility in Dallas
+        <!-- Article Header -->
+        <article class="bg-white rounded-xl shadow-sm p-8 mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                Dallas ICE Facility Shooting Investigated as Ideologically Motivated Attack
+            </h1>
+            
+            <div class="flex items-center text-gray-600 mb-6">
+                <i class="fas fa-map-marker-alt mr-1"></i>
+                <span>Dallas, Texas</span>
+                <span class="mx-2">•</span>
+                <i class="fas fa-clock mr-1"></i>
+                <span>Published: Today at 8:15 AM CST</span>
             </div>
-          </div>
 
-          {/* Article Body */}
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-              Early this morning, gunfire erupted outside a Dallas ICE facility when a suspect opened fire from a nearby building, killing at least four people and injuring several others before taking his own life.
-            </p>
+            <!-- Lead Image -->
+            <div class="relative mb-8">
+                <img 
+                    src="https://placehold.co/800x400?text=ICE+Facility+Location+-+Dallas" 
+                    alt="U.S. ICE Facility in Dallas"
+                    class="w-full h-auto rounded-xl object-cover"
+                />
+                <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded text-sm">
+                    Satellite view of U.S. ICE Facility in Dallas
+                </div>
+            </div>
 
-            <p className="mb-4 text-gray-700 leading-relaxed">
-              FBI Director Kash Patel announced during a press conference that initial evidence points to an ideological motive behind the attack. Investigators recovered a shell casing engraved with the words "ANTI ICE," suggesting the suspect's actions were driven by anti-immigration enforcement sentiments.
-            </p>
+            <!-- Article Body -->
+            <div class="prose prose-lg max-w-none">
+                <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+                    Early this morning, gunfire erupted outside a Dallas ICE facility when a suspect opened fire from a nearby building, killing at least four people and injuring several others before taking his own life.
+                </p>
 
-            <p className="mb-4 text-gray-700 leading-relaxed">
-              Federal authorities, including the FBI, Department of Homeland Security (DHS), and Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF), are working alongside Dallas Police Department and Texas state officials to conduct a comprehensive investigation into the incident.
-            </p>
+                <p class="mb-4 text-gray-700 leading-relaxed">
+                    FBI Director Kash Patel announced during a press conference that initial evidence points to an ideological motive behind the attack. Investigators recovered a shell casing engraved with the words "ANTI ICE," suggesting the suspect's actions were driven by anti-immigration enforcement sentiments.
+                </p>
 
-            <p className="mb-4 text-gray-700 leading-relaxed">
-              The suspect has been identified as 29-year-old Joshua Jahn, according to law enforcement sources. Preliminary reports indicate that Jahn specifically targeted an unmarked van that was transporting immigration detainees to the facility. The coordinated nature of the attack and the suspect's apparent knowledge of ICE operations have raised concerns about potential surveillance of federal facilities.
-            </p>
+                <p class="mb-4 text-gray-700 leading-relaxed">
+                    Federal authorities, including the FBI, Department of Homeland Security (DHS), and Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF), are working alongside Dallas Police Department and Texas state officials to conduct a comprehensive investigation into the incident.
+                </p>
 
-            <p className="mb-4 text-gray-700 leading-relaxed">
-              The death toll has since risen to four, according to DHS officials, with multiple others sustaining injuries of varying severity. Medical personnel responded swiftly to the scene, and all injured individuals have been transported to local hospitals for treatment.
-            </p>
+                <p class="mb-4 text-gray-700 leading-relaxed">
+                    The suspect has been identified as 29-year-old Joshua Jahn, according to law enforcement sources. Preliminary reports indicate that Jahn specifically targeted an unmarked van that was transporting immigration detainees to the facility. The coordinated nature of the attack and the suspect's apparent knowledge of ICE operations have raised concerns about potential surveillance of federal facilities.
+                </p>
 
-            <blockquote className="border-l-4 border-red-600 pl-6 italic my-8 text-gray-700">
-              "This appears to be a targeted, ideologically motivated attack against federal law enforcement personnel and the immigration system they represent," said FBI Director Kash Patel during the briefing.
-            </blockquote>
+                <p class="mb-4 text-gray-700 leading-relaxed">
+                    The death toll has since risen to four, according to DHS officials, with multiple others sustaining injuries of varying severity. Medical personnel responded swiftly to the scene, and all injured individuals have been transported to local hospitals for treatment.
+                </p>
 
-            <p className="mb-4 text-gray-700 leading-relaxed">
-              The Dallas ICE facility remains secured, and additional federal security personnel have been deployed to the area. Local schools and businesses in the vicinity were placed on lockdown as a precautionary measure, though most have since resumed normal operations.
-            </p>
+                <blockquote class="border-l-4 border-red-600 pl-6 italic my-8 text-gray-700">
+                    "This appears to be a targeted, ideologically motivated attack against federal law enforcement personnel and the immigration system they represent," said FBI Director Kash Patel during the briefing.
+                </blockquote>
 
-            <p className="text-gray-700 leading-relaxed">
-              This remains an active and developing investigation, with officials expected to provide further updates later today. Authorities are urging anyone with information about the incident or the suspect's activities in the days leading up to the attack to contact the FBI tip line immediately.
-            </p>
-          </div>
+                <p class="mb-4 text-gray-700 leading-relaxed">
+                    The Dallas ICE facility remains secured, and additional federal security personnel have been deployed to the area. Local schools and businesses in the vicinity were placed on lockdown as a precautionary measure, though most have since resumed normal operations.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    This remains an active and developing investigation, with officials expected to provide further updates later today. Authorities are urging anyone with information about the incident or the suspect's activities in the days leading up to the attack to contact the FBI tip line immediately.
+                </p>
+            </div>
         </article>
 
-        {/* Related Information */}
-        <div className="bg-white rounded-xl shadow-sm p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Key Facts</h2>
-          <div className="grid md:grid-cols-2 gap-4 text-sm">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Incident Details</h3>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Location: Dallas ICE Processing Center</li>
-                <li>• Time: Early morning hours</li>
-                <li>• Method: Gunfire from nearby building</li>
-                <li>• Target: Unmarked ICE transport van</li>
-              </ul>
+        <!-- Related Information -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Key Facts</h2>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">Incident Details</h3>
+                    <ul class="space-y-1 text-gray-700">
+                        <li>• Location: Dallas ICE Processing Center</li>
+                        <li>• Time: Early morning hours</li>
+                        <li>• Method: Gunfire from nearby building</li>
+                        <li>• Target: Unmarked ICE transport van</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">Investigation Status</h3>
+                    <ul class="space-y-1 text-gray-700">
+                        <li>• Lead Agency: FBI Dallas Field Office</li>
+                        <li>• Supporting: DHS, ATF, Dallas PD</li>
+                        <li>• Motive: Ideologically motivated</li>
+                        <li>• Status: Active investigation</li>
+                    </ul>
+                </div>
             </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Investigation Status</h3>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Lead Agency: FBI Dallas Field Office</li>
-                <li>• Supporting: DHS, ATF, Dallas PD</li>
-                <li>• Motive: Ideologically motivated</li>
-                <li>• Status: Active investigation</li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </main>
+    </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-12">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-gray-400">
-            © 2024 Dallas News Network. All rights reserved. | For breaking news updates, follow us on social media.
-          </p>
-          <p className="text-gray-500 text-sm mt-2">
-            This is a developing story. Check back for updates throughout the day.
-          </p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-gray-400">
+                © 2025 Nexus Dossiers. All rights reserved. | For breaking news updates, follow us on social media.
+            </p>
+            <p class="text-gray-500 text-sm mt-2">
+                This is a developing story. Check back for updates throughout the day.
+            </p>
         </div>
-      </footer>
-    </div>
-  );
-}
+    </footer>
+</body>
+</html>
 ```
