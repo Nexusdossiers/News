@@ -1,0 +1,24 @@
+title: The Nexus Dossier
+email: nexusdossiers@outlook.com
+description: A professional news site built with Jekyll and GitHub Pages.
+baseurl: ""
+url: "https://nexusdossiers.github.io" # Replace with your GitHub Pages URL
+twitter_username: nexusdossiers
+github_username:  nexusdossiers
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
